@@ -4,6 +4,10 @@ using System.Text;
 
 namespace g1ant
 {
+    /// <summary>
+    /// Decode an 8-letter word from the chain of signs “acegilmnoprstuwxyz”, where the outcome of the function GetHash() is equal to “25157672851591”.
+    /// As an example, if you want to find a 4-letter word, where the outcome of the function GetHash() = 13625924, the outcome of the task is the word “rano”.
+    /// </summary>
     class HashUtils
     {
         private static string _signs = "acegilmnoprstuwxyz";
