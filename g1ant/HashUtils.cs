@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text;
 
 namespace g1ant
@@ -30,7 +31,13 @@ namespace g1ant
             for (int i = 1; i <= length; i++)
             {
                 if (value <= 7)
-                    break;
+                {
+                    if (i < length)
+                        throw new Exception(
+                            string.Format("Decoded word '{0}' contains only {1} signs out of {2}", new string(sb.ToString().Reverse().ToArray()), i, length));
+                    else
+                        break;
+                }
 
                 index = value % 37;
                 value = (value - index) / 37;
